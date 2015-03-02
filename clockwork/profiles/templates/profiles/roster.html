@@ -8,8 +8,8 @@
 {% block content %}
   <h1 class="text-center">Guild Roster</h1>
 
-  <div class="row">
-    <div class="col-md-3">
+  <div id="roster-nav" class="row">
+    <div class="col-md-12">
       <div class="well">
 	<ul class="nav nav-pills nav-stacked">
 	  <li class="deathknights">
@@ -48,7 +48,9 @@
 	</ul>
       </div>
     </div>
-    <div class="col-md-9">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <div class="roster-table-div" id="deathknights">
 	{% include "profiles/roster_table.html" with class="deathknights" list=deathknights title="Death Knights" %}
       </div>
@@ -83,13 +85,13 @@
 	{% include "profiles/roster_table.html" with class="warriors" list=warriors title="Warriors" %}
       </div>
       <div id="help-text">
-	<h3>Click on a class on the left to show &lt;Clockwork&gt; members of that class.</h3>
+	<h3>Click on a class above to show &lt;Clockwork&gt; members of that class.</h3>
       </div>
     </div>
   </div>
 
   <script src="{{ STATIC_URL }}js/roster.js"></script>
-  
-  
+
+
 {% endblock %}
-    
+
